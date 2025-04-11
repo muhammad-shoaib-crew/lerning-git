@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Blog extends Model
+{
+    /** @use HasFactory<\Database\Factories\BlogFactory> */
+    use HasFactory;
+
+    public function author(){
+        return $this->belongsTo(User::class);
+    }
+    
+    public function tags(){
+        return $this->belongsToMany(BlogTags::class, table:'blogs_tags_pivot');
+    }
+}
