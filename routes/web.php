@@ -17,6 +17,8 @@ Route::view('/', 'home');
 Route::view('/about', 'about');
 
 Route::view('/contact', 'contact');
+Route::view('/projects', 'contact');
+Route::view('/services', 'contact');
 
 
 
